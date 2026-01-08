@@ -3,12 +3,16 @@ const router = express.Router();
 
 // GET users
 router.get("/", (req, res) => {
-  res.json([
+  res.json({
+    status: 200,
+    message: "User list fetched successfully",
+    data:
+    [
     { id: 1, name: "Vishal" },
     { id: 2, name: "Rahul" },
     { id: 3, name: "Yash" },
     { id: 4, name: "Rupesh" }
-  ]);
+  ]});
 });
 
 // POST user
